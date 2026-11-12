@@ -20,6 +20,14 @@
 
 ---
 
+## 配好之后长这样
+
+供应商卡片上会直接显示实时额度（5 小时 / 每周 / 每月）和「路由中」标记：
+
+![Command Code 供应商卡片与额度](assets/01-provider-card.png)
+
+---
+
 ## 为什么必须用 OpenAI Chat？
 
 Command Code 有两个数据面接口：
@@ -73,6 +81,14 @@ CC-Switch 会把 `~/.claude/settings.json` 里的 `ANTHROPIC_BASE_URL` 指向本
 4. 粘贴 API Key
 5. 切换到该供应商，确认进入**路由模式**
 6. **重启 Claude Desktop**，让它重新读取被改写的网关配置
+
+真正决定能不能跑通的是「请求地址」和「上游格式」这两项：
+
+![供应商设置：请求地址与 API Key](assets/02-provider-basic.png)
+
+![上游格式选 OpenAI Chat，并配置模型映射](assets/03-provider-models.png)
+
+> 「官网链接」只是展示用，不影响请求。
 
 ---
 

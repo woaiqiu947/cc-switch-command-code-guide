@@ -20,6 +20,14 @@ If you only remember one thing: **do not use the Anthropic format with Command C
 
 ---
 
+## What it looks like
+
+Once it is wired up, the provider card shows the live quota (5-hour / weekly / monthly) and the routing badge:
+
+![Command Code provider card with quota](assets/01-provider-card.png)
+
+---
+
 ## Why "OpenAI Chat" and not "Anthropic"?
 
 Command Code exposes two data-plane endpoints:
@@ -73,6 +81,14 @@ CC-Switch writes `~/.claude/settings.json` with `ANTHROPIC_BASE_URL` pointing at
 4. Paste your API key
 5. Switch to the provider and accept **routing mode**
 6. **Restart Claude Desktop** so it re-reads the rewritten gateway config
+
+The two fields that matter are the request URL and the upstream format:
+
+![Provider settings: request URL and API key](assets/02-provider-basic.png)
+
+![Upstream format set to OpenAI Chat, with model mapping](assets/03-provider-models.png)
+
+> The "homepage" field is cosmetic and does not affect requests.
 
 ---
 
