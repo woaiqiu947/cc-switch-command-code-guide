@@ -1,0 +1,30 @@
+{
+  "_comment": "CC-Switch provider row for Claude Code. settings_config goes into the provider's settings; meta goes into the provider's meta column. Replace YOUR_API_KEY.",
+  "app_type": "claude",
+  "name": "Command Code",
+  "category": "third_party",
+  "website_url": "https://commandcode.ai",
+  "icon": "commandcode",
+  "settings_config": {
+    "env": {
+      "ANTHROPIC_BASE_URL": "https://api.commandcode.ai/provider",
+      "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY",
+      "ANTHROPIC_MODEL": "deepseek/deepseek-v4.1-flash[1M]",
+      "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek/deepseek-v4.1-flash[1M]",
+      "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek/deepseek-v4.1-flash[1M]",
+      "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek/deepseek-v4.1-flash[1M]"
+    }
+  },
+  "meta": {
+    "apiFormat": "openai_chat",
+    "usage_script": {
+      "enabled": true,
+      "language": "javascript",
+      "code": "",
+      "timeout": 10,
+      "templateType": "token_plan",
+      "autoQueryInterval": 5,
+      "codingPlanProvider": "command_code"
+    }
+  }
+}

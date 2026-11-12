@@ -1,0 +1,49 @@
+{
+  "_comment": "CC-Switch provider row for Claude Desktop. Model routes map Claude's model slots onto Command Code models. Replace YOUR_API_KEY.",
+  "app_type": "claude-desktop",
+  "name": "Command Code",
+  "category": "third_party",
+  "website_url": "https://commandcode.ai",
+  "icon": "commandcode",
+  "settings_config": {
+    "env": {
+      "ANTHROPIC_BASE_URL": "https://api.commandcode.ai/provider",
+      "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY"
+    }
+  },
+  "meta": {
+    "claudeDesktopMode": "proxy",
+    "apiFormat": "openai_chat",
+    "claudeDesktopModelRoutes": {
+      "claude-opus-5": {
+        "model": "deepseek/deepseek-v4.1-flash",
+        "labelOverride": "deepseek/deepseek-v4.1-flash",
+        "supports1m": true
+      },
+      "claude-sonnet-5": {
+        "model": "deepseek/deepseek-v4.1-flash",
+        "labelOverride": "deepseek/deepseek-v4.1-flash",
+        "supports1m": true
+      },
+      "claude-haiku-4-5": {
+        "model": "deepseek/deepseek-v4.1-flash",
+        "labelOverride": "deepseek/deepseek-v4.1-flash",
+        "supports1m": true
+      },
+      "claude-fable-5": {
+        "model": "deepseek/deepseek-v4.1-flash",
+        "labelOverride": "deepseek/deepseek-v4.1-flash",
+        "supports1m": true
+      }
+    },
+    "usage_script": {
+      "enabled": true,
+      "language": "javascript",
+      "code": "",
+      "timeout": 10,
+      "templateType": "token_plan",
+      "autoQueryInterval": 5,
+      "codingPlanProvider": "command_code"
+    }
+  }
+}
